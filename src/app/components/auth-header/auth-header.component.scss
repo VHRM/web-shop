@@ -1,0 +1,30 @@
+.spacer {
+    height: 58px;
+}
+.header {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+
+    background-color: #94B0DA;
+    box-sizing: border-box;
+    padding: 5px 10px;
+
+    .logo {
+        display: flex;
+        align-items: center;
+        img {
+            width: 100px;
+            background-blend-mode: normal;
+        }
+    }
+
+    .dropdown {
+        color: white;
+    }
+}

@@ -1,0 +1,15 @@
+<div class="list">
+    <div class="filter" [class]="{on: toggleFilter}">
+        <app-filter (filterData)="filterHandler($event)" [minPrice]="minMaxPrice[0]" [maxPrice]="minMaxPrice[1]"></app-filter>
+    </div>
+    <div class="content">
+        <h1>Nossos produtos</h1>
+        <div class="cards">
+            <app-list-item class="card" (selectedItem)="itemSelected($event)" *ngFor="let product of filteredData" [item]="product"></app-list-item>
+        </div>
+    </div>
+</div>
+
+<div class="filter-toggle" (click)="toggle()">
+    <mat-icon>{{toggleFilter ? 'close' : 'filter_list'}}</mat-icon>
+</div>

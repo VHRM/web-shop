@@ -1,0 +1,22 @@
+<div class="header">
+    <span class="previous" (click)="redirectBack()"><mat-icon style="margin-bottom: -7px; margin-right: 5px;">arrow_back</mat-icon> Voltar</span>
+</div>
+<div class="details">
+    <div class="content">
+        <h1 class="title">{{product.nome}}</h1>
+        <div class="image">
+            <img [src]="product.imageUrl" alt="" srcset="">
+        </div>
+        <p class="description">{{product.descricao}}</p>
+    </div>
+    <div class="payment">
+        <p class="prazo">Prazo para implantação: {{product.prazo}}</p>
+
+        <div class="bottom">
+            <p class="price">Preço do produto: <strong>{{product.price | money}}</strong></p>
+            <p class="price">Taxa de serviço: <strong>{{product.price * 0.1 | money}}</strong></p>
+            <p class="total">Total: <strong>{{product.price * 1.1 | money}}</strong></p>
+            <button mat-raised-button color="primary" class="submit" (click)="setUpPayment()">Finalizar compra</button>
+        </div>
+    </div>
+</div>

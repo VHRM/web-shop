@@ -1,0 +1,25 @@
+<div class="background">
+    <div class="card">
+        <h1>Login</h1>
+        <form [formGroup]="loginForm">
+            <div class="login">
+                <mat-form-field class="full-width white-input" [hideRequiredMarker]="true">
+                    <mat-label>Usuário</mat-label>
+                    <input type="text" matInput formControlName="user" placeholder="Usuário">
+                    <mat-error *ngIf="loginForm.get('user')?.invalid">{{getErrorMessage("user")}}</mat-error>
+                </mat-form-field>
+                <mat-form-field class="full-width white-input" color="accent" [hideRequiredMarker]="true">
+                    <mat-label>Senha</mat-label>
+                    <input [type]="visible ? 'text' : 'password'" matInput formControlName="pass" placeholder="Senha">
+                    <mat-error *ngIf="loginForm.get('pass')?.invalid">{{getErrorMessage("pass")}}</mat-error>
+                </mat-form-field>
+            </div>
+    
+            <button mat-raised-button color="primary" class="submit" (click)="submitForm()">
+                Entrar
+            </button>
+        </form>
+
+        <img class="card-image" src="../../../../assets/images/bus-ticket.png" alt="">
+    </div>
+</div>

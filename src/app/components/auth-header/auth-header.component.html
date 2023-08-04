@@ -1,0 +1,18 @@
+<div class="spacer" *ngIf="visible"></div>
+<div class="header" *ngIf="visible">
+    <div class="logo">
+        <img src="../../../assets/logo-no-background.svg" alt="" srcset="">
+    </div>
+
+    <div class="menu">
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon class="dropdown">more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="logout()">
+                <mat-icon>logout</mat-icon>
+                <span>Sair</span>
+            </button>
+        </mat-menu>
+    </div>
+</div>

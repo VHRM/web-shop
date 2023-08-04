@@ -1,0 +1,8 @@
+<div class="card" (click)="selectItem()">
+    <div class="image-container">
+        <img [src]="item.imageUrl" alt="">
+    </div>
+    <div class="title">{{item.nome}}</div>
+    <div class="price">{{item.price | money}}</div>
+    <button mat-raised-button color="primary" class="cta" (click)="selectItem()">Solicitar</button>
+</div>

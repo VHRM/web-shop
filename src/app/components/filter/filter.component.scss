@@ -1,0 +1,30 @@
+.filter {
+    background-color: #DCEDFF;
+    margin: 0;
+    padding: 0 10px;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #DCEDFF;
+    
+    .label {
+        font-size: 1.8rem;
+    }
+    
+    .full-width {
+        width: 100%;
+    }
+
+    .half-width {
+        width: calc(50% - 10px);
+        @media screen and (max-width: 1050px) {
+            width: 100%;
+        }
+    }
+
+    .space-between {
+        @media screen and (max-width: 1050px) {
+            flex-wrap: wrap;
+        }
+    }
+}
